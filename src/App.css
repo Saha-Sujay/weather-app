@@ -1,0 +1,240 @@
+/* imports */
+@import url('https://fonts.googleapis.com/css?family=Quicksand:400,700');
+
+
+/* start general */
+* {
+	margin: 0;
+	padding: 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  background: rgb(59, 27, 27);
+  font-family: 'Quicksand', sans-serif;
+}
+
+input, 
+select, 
+textarea, 
+button {
+  font-family:inherit; /* to get form inherit font family as does not inherit by default*/
+}
+
+
+/* start App */
+.App {
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  background: #78a8c4;
+  margin-top: 10px;
+}
+
+
+
+
+
+
+
+
+/* start Form */
+.form {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.form-container {
+  max-width: 580px;
+  width: 100%;
+  padding: 35px;
+  margin: auto;
+}
+
+.form-container .form-row {
+  width: 100%;
+  margin: 0 auto 20px;
+}
+
+.form-container .form-text {
+  display: inline-block;
+  width: 95%;
+  height: 45px;
+  border: none;
+  font-size: 16px;
+}
+
+
+.form-container .sub-btn {
+  width: 95%;
+  height: 45px;
+  padding: 0 25px;
+  border: none;
+  background: #cdd89c;
+  font-weight: 700;
+  font-size: 16px;
+  margin-left: 10px;
+}
+
+
+/* Start Weather */
+.weather-wrapper {
+  width: 100%;
+  text-align: left;
+  color: rgb(0, 27, 37);
+  display: none;
+}
+
+.weather-wrapper .main-data {
+  display: flex;
+  align-items: baseline;
+  padding: 0 5px;
+}
+
+.weather-wrapper .temp {
+  font-size: 45px;
+  font-weight: 700;
+}
+
+
+
+
+
+.weather-wrapper .location {
+  font-size: 23px;
+  font-weight: 700;
+}
+
+
+
+.weather-details {
+  width: 100%;
+  padding: 18px;
+  margin-left: auto;
+  text-align: left;
+  color: rgb(107, 1, 1);
+  display: none;
+}
+
+
+.weather-details .weather-title {
+  color: #1a0000;
+  font-size: 15px;
+}
+
+
+
+/* weather-wrapper and .weather-details display none by default  */
+/* .display-component used to show them again after user click btn */
+.weather-wrapper.display-component,
+.weather-details.display-component {
+  display: inline-block;
+}
+
+
+
+
+/* media queries*/
+/* for medium screens */
+@media screen and (min-width: 501px)and (max-width: 600px) {
+  .titles-Wrapper h1 {
+    font-size: 15px;
+  }
+  
+  .form-container {
+    padding: 50px;
+  }
+
+  .form-container .form-row {
+    width: 49%;
+  }
+
+  .form-container .sub-btn {
+    width: 49%;
+    margin: auto;
+  }
+
+  .weather-wrapper, .weather-details {
+    padding: 18px 35px;
+  }
+}
+
+@media screen and (min-width: 601px) {
+  .titles-Wrapper .logo-img {
+    width: 45%;
+  }
+  
+  .form-container {
+    width: 50%;
+  }
+
+
+  
+  .weather-details {
+    padding: 18px 35px;
+  }
+
+  
+
+  .weather-wrapper .temp {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .weather-wrapper .vertical-line {
+    display: none;
+  }
+
+  .weather-wrapper .location {
+    width: 100%;
+  }
+
+  .weather-details {
+    width: 50%;
+  }
+  
+}
+
+
+/* for large screens */
+@media screen and (min-width: 751px) {
+
+  .weather-wrapper {
+      width: 50%;
+  }
+
+  .weather-wrapper .temp {
+    width: 35%
+  }
+
+  .weather-wrapper .vertical-line {
+    display: inline-block;
+  }
+
+  .weather-wrapper .location {
+    width: 40%;
+  }
+
+  .weather-details {
+    width: 50%;
+  }
+
+}
+
+@media screen and (min-width: 900px) {
+  .App {
+    width: 900px;
+    margin: 10px auto;
+  }
+}
+.titles-Wrapper{
+  margin: auto;
+}
